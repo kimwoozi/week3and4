@@ -1,4 +1,80 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+  @include pad{
+    max-width: 720px;
+  }
+  @include mobile{
+    max-width: 372px;
+  }
+}
+.bg-color{
+  background-color: #AA0601;
+  color: #FFF;
+}
+.navbar-wrap{
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+      flex-direction: column;
+      /* column 換行 
+      移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+}
+.nav{
+  padding: 16px 0;
+  @media (max-width: 768px) {
+      padding-bottom: 0;
+      /* li設置白線後會發現有上一行設定的padding
+      上下16px，這裡不需要下方16px */
+  }
+}
+.nav-logo{
+  width: 80px;
+  @media (max-width: 768px) {
+      margin: 0 0 16px 16px;
+      /* 上右下左 ， 下左推出16px */
+  }
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+      flex-wrap: wrap;
+      /* 將navbar-item設定成換行 */
+  }
+}
+.navbar-item{
+  height: 100%;
+  /* 滿版寬度為100%，後面平板50%、手機也同50% */
+  @media (max-width: 768px) {
+      width: 50%;
+      border: 1px solid #ffffff;
+      margin-right: 0px;
+  }
+}
+.nav-link{
+  font-size: 20px;
+  color: #FFF;
+  display: block;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  height: 100%;
+  @media (max-width: 768px){
+      font-size: 16px;
+      padding: 12px 0;
+      justify-content: center;
+  }
+}
+.hover:hover{
+  opacity: 0.8;
+}
+.navbar-item:last-child .nav-link{
+  padding-right: 0;
 }

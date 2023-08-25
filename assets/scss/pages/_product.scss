@@ -1,0 +1,138 @@
+.subnav{
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+}
+.submenu{
+    @include jcc;
+    li{
+        border: 1px solid #DCDCDC;
+        width: 432px;
+        padding: 24px 0;
+        @include pad{
+            padding: 16px 0;
+        }
+        &:first-child {
+            border-bottom: 8px solid #AA0601;
+            padding-bottom: 16px;
+        }
+        a{
+            font-size: $font-md-mb;
+            font-weight: bold;
+            color: #000;
+            @include pad{
+                font-size: $font-lg;
+            }
+            @include mobile{
+                font-size: $font-md;
+            }
+        }
+    }
+}
+
+/* ================ */
+
+.banner-img{
+    width: 50%;
+    height: 296px;
+    @include mobile{
+        height: 136px;  
+    }
+}
+.banner-left{
+    background: url("https://raw.githubusercontent.com/kimwoozi/week3/main/img/product-header-1.png") no-repeat center center / cover;
+    @include pad{ 
+        background: url("https://raw.githubusercontent.com/kimwoozi/week3/main/img/product-header-sm-1.png") no-repeat center center / cover;
+    }
+}
+.banner-right{
+    background: url("https://raw.githubusercontent.com/kimwoozi/week3/main/img/product-header-2.png") no-repeat center center / cover;
+    @include pad{  
+        background: url("https://raw.githubusercontent.com/kimwoozi/week3/main/img/product-header-sm-2.png") no-repeat center center / cover;
+    }
+}
+
+/* ========title========= */
+.product{
+    margin: 80px 0;
+}
+.product-title{
+    @include jcc;
+    margin-bottom: 32px;
+}
+.pro-title-h2{
+    font-size: $font-lg-mb;
+    //42px
+    @include mobile{
+        font-size: $font-lg; 
+    }
+}
+.pro-title-h3{
+    font-size: $font-md-mb;
+    //32px
+    @include mobile{
+        font-size: $font-lg; 
+        //24px
+    }
+}
+/* ============= */
+.product-list{
+    @include jcc;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1296px;
+    li{
+        max-width: 306px;
+        margin-bottom: 80px;
+    }
+    img{
+        /* 需要爆框效果 不加overflow: hidden */
+        transform:scale(1,1);transition: all 1s ease-out;
+        &:hover{
+            opacity: 0.8;
+            transform:scale(1.1,1.1);
+        }
+    }
+}
+
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-lg;
+    font-weight: bold;
+}
+.pro-name{
+    color: $text;
+}
+.pro-price{
+    color: $c-primary;
+}
+.color-brown{
+    @include color-box;
+    background-color: $pro-color-main ;
+    margin-right: 8px;
+}
+.color-red{
+    @include color-box;
+    background-color: $pro-color-secondary;
+}
+.pagination{
+    @include jcc;
+    li a {
+        font-size: 19px;
+        padding: 12px 16px;
+        color: #555555;
+        text-align: center;
+        display: flex;
+        border: 1px solid #555555;
+        &.active {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        &:hover:not(.active) {
+            background-color: #F2F2F2;
+        }
+    }
+    
+}
+
