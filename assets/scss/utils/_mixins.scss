@@ -12,20 +12,85 @@
   }
 }
 
+//1295px 特殊區塊 
+@mixin large-desk {
+  @media (max-width: 1295px) {
+    @content;
+  }
+}
+
 // @include pad{
 //   改變的css
 // }
 // @include mobile{
 //   改變的css
 // }
-@mixin jcc {
+@mixin container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 12px;
+
+  @include large-desk {
+    max-width: 1290px;
+  }
+
+  @include pad {
+    max-width: 720px;
+  }
+
+  @include mobile {
+    max-width: 372px;
+  }
+}
+
+@mixin flex-sb {
   display: flex;
-  justify-content: center;
   text-align: center;
+  justify-content: space-between;
+}
+
+// @mixin jcc {
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+// }
+
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin color-box {
   width: 24px;
   height: 24px;
   border-radius: 4px;
-}//眼鏡顏色方塊
+}
+
+//眼鏡顏色方塊
+
+
+@mixin h3 {
+  text-align: center;
+  font-size: $font-size-5xl;
+  font-weight: bold;
+  color: $c-info;
+
+  @include mobile {
+    font-size: $font-size-2xl;
+  }
+}//首頁h3
+
+@mixin h4 {
+  color: $c-primary;
+  font-style: italic;
+  font-size: $font-size-5xl;
+}//首頁h4
+
+@mixin box-padding {
+  padding: 80px 0;
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}

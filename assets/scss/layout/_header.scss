@@ -1,22 +1,12 @@
 .container {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 12px;
-  @include pad{
-    max-width: 720px;
-  }
-  @include mobile{
-    max-width: 372px;
-  }
+  @include container;
 }
 .bg-color{
-  background-color: #AA0601;
-  color: #FFF;
+  background-color: $c-primary;
+  color: $white;
 }
 .navbar-wrap{
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: 768px) {
+  @include mobile{
       flex-direction: column;
       /* column 換行 
       移除左右 padding 再加入 max-width: 100%; 讓導覽列能變為滿版 */
@@ -27,7 +17,7 @@
 }
 .nav{
   padding: 16px 0;
-  @media (max-width: 768px) {
+  @include mobile{
       padding-bottom: 0;
       /* li設置白線後會發現有上一行設定的padding
       上下16px，這裡不需要下方16px */
@@ -35,7 +25,7 @@
 }
 .nav-logo{
   width: 80px;
-  @media (max-width: 768px) {
+  @include mobile {
       margin: 0 0 16px 16px;
       /* 上右下左 ， 下左推出16px */
   }
@@ -43,7 +33,7 @@
 .navbar{
   display: flex;
   align-items: center;
-  @media (max-width: 768px) {
+  @include mobile {
       flex-wrap: wrap;
       /* 將navbar-item設定成換行 */
   }
@@ -51,23 +41,23 @@
 .navbar-item{
   height: 100%;
   /* 滿版寬度為100%，後面平板50%、手機也同50% */
-  @media (max-width: 768px) {
+  @include mobile{
       width: 50%;
-      border: 1px solid #ffffff;
+      border: 1px solid $white;
       margin-right: 0px;
   }
 }
 .nav-link{
-  font-size: 20px;
-  color: #FFF;
+  font-size: $h5-font-size;
+  color: $white;
   display: block;
   padding: 0 32px;
   display: flex;
   align-items: center;
   font-weight: bold;
   height: 100%;
-  @media (max-width: 768px){
-      font-size: 16px;
+  @include mobile{
+      font-size: $h6-font-size;
       padding: 12px 0;
       justify-content: center;
   }

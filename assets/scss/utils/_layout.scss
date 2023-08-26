@@ -1,7 +1,14 @@
-.df{
+.df {
     display: flex;
 }
-.jc-sb{
+
+.jc-sb {
     display: flex;
     justify-content: space-between;
+}
+
+.jcc {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

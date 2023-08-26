@@ -1,3 +1,155 @@
-.index-title {
-  font-size: 100px;
+
+.content-img {
+  
+  height: 787px;
+  background: url("https://raw.githubusercontent.com/kimwoozi/week3/main/img/home-header.png") no-repeat center center / cover;
+  @include flex-col;
+  justify-content: center;
+  
+  @include pad {
+    background: url("https://raw.githubusercontent.com/kimwoozi/week3/main/img/home-header-sm.png") no-repeat center center / cover;
+  }
+
+  @include mobile {
+    height: 396px;
+  }
+}
+
+.content-txt{
+  @include flex-col;
+  align-items: flex-end;
+  p{
+    color: $c-info;
+    font-size: $font-size-4xl;
+    @include pad{
+      font-size: $font-size-base;
+    }
+  }
+  h1{
+    color: $c-info;
+    font-size: $h1-font-size;
+    font-weight: bold;
+    @include pad{
+      font-size: $font-size-2xl;
+    }
+  }
+  a{
+    font-size: $font-size-xl;
+    background-color: $c-primary;
+    color: $white;
+    padding: 6px 12px;
+  }
+}
+// 服務理念
+.service{
+  background-color: $c-service;
+  @include box-padding;
+  @include pad{
+    padding-bottom: 56px;
+  }
+  @include mobile{
+    padding-bottom: 16px;
+  }
+
+  h3{
+    @include h3;
+    margin-bottom: 24px;
+  }
+  ul{
+    @include flex-sb;
+    flex-wrap: wrap;
+    @include mobile{
+      justify-content: center;
+    }
+  }
+  li{
+    max-width: 306px;
+    @include pad{
+      margin-bottom: 24px;
+    }
+  }
+  img{
+    max-height: 100px;
+    max-width: 100px;
+    margin-bottom: 16px;
+  }
+  h5{
+    font-size: $font-size-2xl;
+    color: $c-info;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  p{
+    text-align: left;
+  }
+}
+//經典眼鏡
+.classic{
+  @include h3;
+  @include box-padding;
+  h3{
+    margin-bottom: 48px;
+    @include mobile{
+      margin-bottom: 24px;
+    }
+  }
+  ul{
+    @include flex-sb;
+    flex-wrap: wrap;
+    @include pad{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  li:not(:last-child) {
+    padding-bottom: 24px;
+  }
+  img{
+    max-width: 416px;
+    padding-bottom: 8px;
+    @include large-desk{
+      max-width: 310px;
+    }
+    @include pad{
+      max-width: 336px;
+    }
+  }
+  h4{
+      @include h4;
+  }
+}
+
+//聯名設計鏡框
+.co-branding{
+  @include box-padding;
+  background: url("/assets/images/index-bg.png") no-repeat center center / cover;
+  @include pad{
+    background: url("/assets/images/index-bg-md.png") no-repeat center center / cover;
+  }
+  @include mobile{
+    background: url("/assets/images/index-bg-sm.png") no-repeat center center / cover;
+  }
+  .co-branding-series{
+    display: flex;
+    @include pad{
+      flex-direction: column;
+      div:first-child{
+        padding-bottom: 24px;
+      }
+    }
+  }
+  h3{
+    @include h3;
+    color: $white;
+    padding-bottom: 48px;
+  }
+  h4{
+    @include h4;
+    text-align: center;
+    background-color: $white;
+    padding: 8px 0;
+    @include pad{
+    
+  }
+  }  
 }
