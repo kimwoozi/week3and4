@@ -1,5 +1,6 @@
 
 .content-img {
+  
   height: 787px;
   background: url("https://raw.githubusercontent.com/kimwoozi/week3/main/img/home-header.png") no-repeat center center / cover;
   @include flex-col;
@@ -189,7 +190,8 @@
 .cust-txt{
   height: 205px;
   padding: 16px;
-  @include flex-col;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   p{
@@ -266,3 +268,6 @@
 .contact-text{
   max-width: 636px;
 }
+// * {
+//   outline: 1px solid red;
+// }
