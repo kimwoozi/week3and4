@@ -49,11 +49,10 @@
   justify-content: space-between;
 }
 
-// @mixin jcc {
-//   display: flex;
-//   justify-content: center;
-//   text-align: center;
-// }
+@mixin flex-jcc {
+  display: flex;
+  justify-content: center;
+}
 
 
 @mixin flex-col {
@@ -93,4 +92,10 @@
   @include mobile {
     padding: 40px 0;
   }
+}
+@mixin box-pb{
+  padding-bottom: 48px;
+    @include mobile{
+      padding-bottom: 24px;
+    }
 }
